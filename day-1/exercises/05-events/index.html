@@ -4,30 +4,31 @@
     </head>
     <body>
         <h1>Exercise: Events</h1>
-        <form onsubmit="handleSignUp(event)">
+        <form>
             <h2>Sign Up</h2>
             <div>
-                <input placeholder='firstName' id="first-name" />
-                <input placeholder='lastName' id="last-name" />
+                <input placeholder='firstName' />
+                <input placeholder='lastName' />
             </div>
             <div>
-                <input placeholder='email' id="email" />
+                <input placeholder='email' />
             </div>
             <div>
-                <input placeholder='password' type="password" id="password" />
+                <input placeholder='password' type="password" />
+                <input placeholder='Confirm password' type="password" />
             </div>
             <button>submit</button>
         </form>
 
         
-        <form onsubmit="handleLogin(event)">
+        <form>
             <h2>Log In</h2>
             <div>
                 <div>
-                    <input placeholder='email' id="login-email" />
+                    <input placeholder='email' />
                 </div>
                 <div>
-                    <input placeholder='password' type="password" id="login-password" />
+                    <input placeholder='password' type="password" />
                 </div>
                 <button>submit</button>
             </div>
@@ -37,36 +38,5 @@
 <script>
 
 // Code Here
-const users = []
-
-function handleSignUp(event) {
-    event.preventDefault()
-
-    const firstName = document.querySelector('#first-name')
-    const lastName = document.querySelector('#last-name')
-    const email = document.querySelector('#email')
-    const password = document.querySelector('#password')
-
-    const newUser = { email: email.value, password: password.value };
-
-    users.push(newUser)
-
-    alert('submitted')
-    console.log(users)
-}
-
-function handleLogin(event) {
-    event.preventDefault()
-
-    const email = document.querySelector('#login-email')
-    const password = document.querySelector('#login-password')
-
-    //const user = users.filter((user) => user.email === email.value && user.password === password.value)
-    const user = users.find((user) => user.email === email.value && user.password === password.value)
-
-    if(user) {
-        alert('user exists')
-    }
-}
 
 </script>

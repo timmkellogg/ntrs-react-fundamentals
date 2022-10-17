@@ -9,39 +9,5 @@
 <script>
 
 // Code Here
-class Person {
-    constructor(firstName, lastName) {
-        this.firstName = firstName
-        this.lastName = lastName
-    }
-}
-
-class Employee extends Person {
-    constructor(firstName, lastName, id, jobTitle, payRate) {
-        super(firstName, lastName)
-        this.id = id,
-        this.jobTitle = jobTitle,
-        this.payRate = payRate
-    }
-
-    promote(newJobTitle, newPayRate) {
-        console.log(this.jobTitle)
-        this.jobTitle = newJobTitle
-        this.payRate = newPayRate
-    }
-
-    toString() {
-        return `${this.firstName} ${this.lastName} (ID: ${this.id} is a ${this.jobTitle} earning $${this.payRate}/hr`
-    }
-
-    getGrossPay(hoursWorked) {
-        return this.payRate * hoursWorked
-    }
-}
-
-const tim = new Employee('tim', 'kellogg', 1, 'software dev', 50)
-console.log(tim)
-tim.promote('circus clown', 100)
-console.log(tim.getGrossPay(10))
 
 </script>
