@@ -63,9 +63,8 @@ function handleLogin(event) {
 
     //const user = users.filter((user) => user.email === email.value && user.password === password.value)
     const user = users.find((user) => user.email === email.value && user.password === password.value)
-    console.log(user)
 
-    if(user.length) {
+    if(user) {
         alert('user exists')
     }
 }
