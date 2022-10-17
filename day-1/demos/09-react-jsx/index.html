@@ -19,16 +19,25 @@
             // Create component
             // const Component = React.createElement('div', {}, ChildComponent)
 
+            function ChildComponent() {
+                return (
+                <div>
+                    <h1>Hello Child!</h1>
+                </div>
+                )
+            }
+
             // Create component using JSX
             function Component() {
                 return (
                 <div>
                     <h1>Hello JSX!</h1>
+                    <ChildComponent />
                 </div>
                 )
             }
 
-            // Render component at root
+            // Render component at root (Root component)
             root.render(<Component />)
 
         </script>

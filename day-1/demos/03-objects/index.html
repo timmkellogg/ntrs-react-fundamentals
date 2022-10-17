@@ -8,27 +8,39 @@
 </html>
 <script>
 
-// Object Literal 
-const tim = {
-    firstName: 'Tim',
-    lastName: 'Kellogg',
-    age: 28,
-    likesPineapple: false,
-    hobbies: ['traveling', 'weightlifting', 'watching movies'],
-    greetings: function () {
-        console.log(`Hello, my name is ${this.firstName} ${this.lastName}.`)
-    } 
+
+function Person(firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+
+  this.getAge = () => {
+    return this.age
+  }
 }
 
+// Adds method to the prototype instead of initializing on every object instance
+Person.prototype.getFullName = function() {
+  return `${this.firstName} ${this.lastName}`;
+};
+
+// Use `new` keyword and call Person passing arguments to the constructor
+const tim = new Person('tim', 'kellogg', 28)
+const mohammed = new Person('mohammed', 'shethwala', 31)
+
+console.log(Person)
+console.log(tim.getFullName())
+
+
 // Dot Notation
-console.log(tim.firstName)
+// console.log(tim.firstName)
 
-console.log(tim.hobbies[1])
+// console.log(tim.hobbies[1])
 
-// Bracket Notation
-console.log(tim['age'])
+// // Bracket Notation
+// console.log(tim['age'])
 
 // Calling a object method
-tim.greetings()
+//tim.greetings()
 
 </script>

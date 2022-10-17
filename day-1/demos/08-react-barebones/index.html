@@ -14,8 +14,11 @@
             // Create root on selected DOM element
             const root = ReactDOM.createRoot(domContainer)
 
+
+            const childElement = React.createElement('h2', { class: 'test'}, 'Hello World!')
+
             // Create component
-            const Component = React.createElement('div', {}, 'Hello World!')
+            const Component = React.createElement('span', {id: 'some-id', class: 'test'}, childElement)
 
             // Render component at root
             root.render(Component)

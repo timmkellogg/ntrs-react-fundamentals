@@ -18,7 +18,7 @@
 
 // }
 
-// Adding method to prototype
+// // Adding method to prototype
 // Person.prototype.greetings = function() {
 //     return `Hello! My name is ${this.firstName} ${this.lastName}`
 // }
@@ -26,10 +26,12 @@
 
 class Person {
 
-    constructor(firstName, lastName, age) {
+    constructor(firstName, lastName, age, likesPineapple, hobbies) {
         this.firstName = firstName
         this.lastName = lastName
         this.age = age
+        this.likesPineapple = likesPineapple
+        this.hobbies = hobbies
     }
 
     greetings() {
@@ -44,13 +46,13 @@ console.log(tim)
 console.log(tim.greetings())
 
 class Programmer extends Person {
-    constructor(firstName, lastName, age, languages) {
-        super(firstName, lastName, age)
+    constructor(firstName, lastName, age, likesPineapple, hobbies, languages) {
+        super(firstName, lastName, age, likesPineapple, hobbies)
         this.languages = languages
     }
 }
 
-const tim2 = new Programmer('tim', 'kellogg', 28, ['javascript', 'php'])
+const tim2 = new Programmer('tim', 'kellogg', 28, false, [], ['javascript', 'php'])
 console.log(tim2)
 
 </script>

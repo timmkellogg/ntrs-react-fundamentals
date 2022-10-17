@@ -12,6 +12,33 @@ const favoriteHero = 'Spider-Man '
 
 const numArr = [4, 8, 15, 16, 23, 42]
 
-// Code Here
+// How would you...
 
+// - Return the number of characters the string contains?
+console.log(favoriteHero.length)
+
+// - Return the string without the trailing whitespace (`'    fffa    fsad    '`)?
+console.log(favoriteHero.trim())
+
+
+// - Return the string with all capital letters? Lower case letters?
+console.log(favoriteHero.toUpperCase())
+console.log(favoriteHero.toLowerCase())
+
+// - Return just the third character in the string (`i`)?
+console.log(favoriteHero.charAt(2))
+
+
+// How would you...
+
+// - Return the array with only including numbers > `15`?
+console.log(numArr.filter((num) => num > 15 ))
+
+// - Return the array with +1 to each number (`[5, 9, 16, 17, 24, 43]`)?
+console.log(numArr.map((num) => num + 1))
+
+// - Return the index of the number `23`?
+console.log(numArr.indexOf(23))
+
+// - How are the `.pop()`, `.push()`, `.sort()`, and `.splice()` methods different than `.filter()`, `.map()`, and `.slice()`? *Read MDN descriptions!*
 </script>
