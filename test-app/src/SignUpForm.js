@@ -17,7 +17,6 @@ class SignUpForm extends Component {
 
         console.log(this.state)
 
-        this.setState({})
     }
 
     handleChange = (event) => {
@@ -78,7 +77,7 @@ class SignUpForm extends Component {
 
                     <br />
                     
-                    <button>Submit</button>
+                    <button className='btn'>Submit</button>
                 </form>
             </div>
         )

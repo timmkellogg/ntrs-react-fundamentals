@@ -1,6 +1,6 @@
 
-function Hello() {
-    return <h1>Hello World!</h1>
+function Hello(props) {
+    return <h1>Hello {props.user.username}!</h1>
 }
 
 export default Hello

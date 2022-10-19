@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
 
 class Counter extends React.Component {
 
@@ -20,7 +21,7 @@ class Counter extends React.Component {
     }
 
     handleReset = () => {
-        this.setState({ count: this.props.initialCount ? this.props.initialCount : 0 })
+        this.setState({ count: 0 })
     }
 
     render() {
@@ -28,9 +29,9 @@ class Counter extends React.Component {
             <div style={{}}>
                 <h1 style={{ color: this.state.count > 10 && 'red'}}>Counter: {this.state.count}</h1>
 
-                <button onClick={this.handleIncrement}>+1</button>
-                <button onClick={this.handleDecrement}>-1</button>
-                <button onClick={this.handleReset}>reset</button>
+                <Button className='btn' onClick={this.handleIncrement}>+1</Button>
+                <Button className='btn' onClick={this.handleDecrement}>-1</Button>
+                <Button className='counter-btn' onClick={this.handleReset}>reset</Button>
             </div>
         )
     }
