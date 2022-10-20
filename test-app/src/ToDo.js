@@ -1,26 +1,14 @@
-import { Component } from 'react'
-
-class ToDo extends Component {
-
-    componentDidMount() {
-        console.log('start timer')
-    }
-
-    componentWillUnmount() {
-        console.log('deleted')
-    }
-
-    render() {
-        return (
-            <li  
-                onClick={() => this.props.handleToggle(this.props.index)}
-                style={{textDecoration: this.props.toDo.completed && 'line-through'}}
-            >
-                {this.props.toDo.taskName}
-                <button onClick={(event) => this.props.handleDelete(event, this.props.index)}>delete</button>
-            </li>
-        )
-    }
+function ToDo({ index, task, handleToggle, handleRemove }) {
+    return (
+        <li key={index}>
+            <span
+                onClick={() => handleToggle(index)}
+                style={{ textDecoration: task.completed && 'line-through' }}>
+                {task.taskName}
+            </span>
+            <button onClick={() => handleRemove(index)}>remove</button>
+        </li>
+    )
 }
 
 export default ToDo

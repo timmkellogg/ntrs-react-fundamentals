@@ -13,6 +13,8 @@ class HomePage extends Component {
         const response = await axios.get(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&rating=g`)
 
         this.setState({ gifs: response.data.data })
+
+        console.log('mounted')
     }
 
     componentDidUpdate() {
