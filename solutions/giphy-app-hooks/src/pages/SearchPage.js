@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import GifViewer from '../components/GifViewer.js'
 
-const API_KEY = 'APIKEYGOESHERE'
+const API_KEY = 'HmEX7II3wXDKvQ7d1d10aO23CimFAj1J'
 
 function SearchPage() {
     const [input, setInput] = useState('')
@@ -13,10 +13,11 @@ function SearchPage() {
         event.preventDefault()
 
         if (!input) return
-
+        
         const res = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${input}&rating=g`)
         
         setGifs(res.data.data)
+        setInput('')
     }
 
     const save = (url) => {
@@ -33,7 +34,7 @@ function SearchPage() {
         <div>
             <h2>Search Gifs</h2>
             <form onSubmit={search}>
-                <input onChange={(e) => setInput(e.target.value)} />
+                <input value={input} onChange={(e) => setInput(e.target.value)} />
                 <button>search</button>
             </form>
             <GifViewer 
