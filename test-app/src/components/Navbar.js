@@ -3,12 +3,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom'
 
-import { useAuth } from '../contexts/AuthContext'
-
 function NavComponent() {
-    const user = useAuth()
-    console.log(user)
-
     return (
         <Navbar bg="dark" variant='dark' expand="lg">
             <Container>
