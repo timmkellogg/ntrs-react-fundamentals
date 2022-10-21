@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import GifViewer from '../components/GifViewer.js'
 
-const API_KEY = 'HmEX7II3wXDKvQ7d1d10aO23CimFAj1J'
+const API_KEY = 'APIKEYGOESHERE'
 
 function SearchPage() {
     const [input, setInput] = useState('')

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useAuth } from '../contexts/authContext'
 
-const API_KEY = 'HmEX7II3wXDKvQ7d1d10aO23CimFAj1J'
+const API_KEY = 'APIKEYGOESHERE'
 
 function HomePage() {
     const [ gifs, setGifs] = useState([])
