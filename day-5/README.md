@@ -22,10 +22,10 @@ This is a *rough* estimation on how long to spend on topics, but will be adjuste
 | 11:15AM | Dynamic Forms                        | 30m      | Do together
 | 11:45AM | Prop Types                           | 30m      |
 | 12:15PM | Lunch                                | 45m      |
-| 1:00PM  | Create React App with TypeScript     | 45m      |
-| 1:45PM  | Higher Order Components              | 30m      |
-| 2:15PM  | Redux                                | 1h       |
-| 3:15PM  | useReducer                           | 30m      |
+| 1:00PM  | Create React App with TypeScript     | 30m      |
+| 1:30PM  | Higher Order Components              | 30m      |
+| 2:00PM  | Redux                                | 1h       |
+| 3:00PM  | useReducer                           | 45m      |
 | 3:45PM  | Break                                | 15m      |
 | 4:00PM  | React Scripts & Simple Deployment    | 30m      |
 | 4:30PM  | Closing Q&A and Goodbye!             | 30m      |
